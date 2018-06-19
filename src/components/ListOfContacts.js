@@ -20,7 +20,8 @@ class ListOfContacts extends React.Component {
       let filteredPeople = this.props.people.filter(
           
         (person) => {
-          var fullName = person.firstName.toLowerCase() + person.lastName.toLowerCase()
+          console.log(person)
+          var fullName = person.first_name.toLowerCase() + person.last_name.toLowerCase()
           return fullName.indexOf(
             this.state.search.toLowerCase()) !== -1;
         }

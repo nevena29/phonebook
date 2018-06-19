@@ -3,12 +3,6 @@ import Header from "../components/Header";
 import ListOfContacts from "../components/ListOfContacts";
 import FormContainer from "./FormContainer";
 
-// let people = [
-//     {firstName: "John", lastName: "Doe", age: 50, phone: "333 4567111"},
-//     {firstName: "Alice", lastName: "Smith", age: 22, phone: "333 45667933"},
-//     {firstName: "Mark", lastName: "Joseph", age: 45, phone: "333 33446776"},
-//     {firstName: "Marion", lastName: "Justin", age: 45, phone: "333 4343433345"}
-//   ];
   
 class PhoneBook extends Component{
     constructor(props){
@@ -20,12 +14,10 @@ class PhoneBook extends Component{
 componentDidMount(){
     this.getPeople();
 }
-getPeople = () =>{
+getPeople = (people) =>{
     fetch("http://localhost:4000/")
     .then(response=>response.json())
-    .then(({data})=>{
-        console.log(data)
-    })
+    .then( response => this.setState({people:response.data}))
     .catch(error=>console.error(error))
     
     
@@ -44,11 +36,11 @@ handleAddContact = (firstName, lastName, telephoneNumber) => {
         }
     });
 }
-renderPeople =(people) =>{
-    this.setState ({
-        people:people
-    })
-}
+// renderPeople =(people) =>{
+//     this.setState ({
+//         people:people
+//     })
+// }
 
     
     render(){
@@ -57,7 +49,7 @@ renderPeople =(people) =>{
         return(
             <div>
             <Header/>
-            <ListOfContacts people = {this.state.people}/>
+            <ListOfContacts people = {this.state.people} getPeople ={this.getPeople}/>
             {/* {people.map(this.renderPeople)} */}
             <FormContainer handleAddContact = {this.handleAddContact}/>
             </div>
