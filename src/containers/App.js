@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import Header from "../components/Header";
 
 import "../App.css";
-import PhoneBook from './PhoneBook';
+import MainPage from './MainPage';
 
 class App extends Component {
   render() {
     return (
-     <PhoneBook/>
+     <MainPage/>
       
       
     

@@ -7,7 +7,7 @@ class FormContainer extends Component {
         const firstName = e.target.firstName.value;
         const lastName = e.target.lastName.value;
         const telephoneNumber = e.target.telephoneNumber.value;
-        this.props.handleAddContact(firstName, lastName, telephoneNumber);
+        // this.props.handleAddContact();
     }
 
     render() {

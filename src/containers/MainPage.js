@@ -4,7 +4,7 @@ import ListOfContacts from "../components/ListOfContacts";
 import FormContainer from "./FormContainer";
 
   
-class PhoneBook extends Component{
+class MainPage extends Component{
     constructor(props){
         super(props);
         this.state = {
@@ -24,18 +24,11 @@ getPeople = (people) =>{
 }
 
 
-
-
-
-
-handleAddContact = (firstName, lastName, telephoneNumber) => {
-    this.setState(() => {
-        return { 
-            contacts: [...this.state.people, { firstName, lastName, telephoneNumber }],
-           
-        }
-    });
-}
+// handleAddContact = () => {
+//     this.setState(() => {
+       
+//     });
+// }
 // renderPeople =(people) =>{
 //     this.setState ({
 //         people:people
@@ -50,8 +43,8 @@ handleAddContact = (firstName, lastName, telephoneNumber) => {
             <div>
             <Header/>
             <ListOfContacts people = {this.state.people} getPeople ={this.getPeople}/>
-            {/* {people.map(this.renderPeople)} */}
-            <FormContainer handleAddContact = {this.handleAddContact}/>
+            <FormContainer />
+            {/* handleAddContact = {this.handleAddContact}/> */}
             </div>
         )
     }
@@ -64,6 +57,6 @@ handleAddContact = (firstName, lastName, telephoneNumber) => {
 
 
 
-export default PhoneBook;
+export default MainPage;
 
 

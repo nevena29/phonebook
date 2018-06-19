@@ -28,8 +28,8 @@ class ListOfContacts extends React.Component {
       );
   
       return (
-        <div className="people-list">
-               <div className="search">
+        <div>
+               <div className="input-field">
                   <input type="text" 
                       className="search_input"
                       value={this.state.search}

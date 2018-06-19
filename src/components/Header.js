@@ -8,8 +8,7 @@ const Header = () =>{
     <div className="nav-wrapper black">
       <a href="#!" className="brand-logo">Welcome to PhoneBook</a>
       <ul className="right hide-on-med-and-down">
-        <li><a className="waves-effect waves-light btn">All Contacts</a></li>
-      </ul>
+       </ul>
     </div>
   </nav>
 
