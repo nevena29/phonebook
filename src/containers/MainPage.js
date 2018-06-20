@@ -43,7 +43,9 @@ handleAddContact = (postContact) =>{
 //          .then(response => response.json())
           .then(this.getPeople)
 //            this.setState({postContact:postContact}))
-        .catch(error => console.error('Error:', error))
+
+
+          .catch(error => console.error('Error:', error))
 }
 
     render(){
@@ -58,7 +60,6 @@ handleAddContact = (postContact) =>{
     }
 
 }
-
 
 export default MainPage;
 
