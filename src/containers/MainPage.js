@@ -25,7 +25,7 @@ class MainPage extends Component{
 // }
 
 getPeople = (people) =>{
-    fetch("http://localhost:4000/")
+    fetch("https://guarded-headland-67001.herokuapp.com/")
     .then(response=>response.json())
     .then( response => this.setState({people:response.data}))
     .catch(error=>console.error(error))
@@ -34,7 +34,7 @@ getPeople = (people) =>{
 }
 handleAddContact = (postContact) =>{
 //    console.log(postContact)
-    fetch(`http://localhost:4000/add_contact/?fn=${postContact.firstName}&ln=${postContact.lastName}&tn=${postContact.phone}`)
+    fetch(`https://guarded-headland-67001.herokuapp.com/add_contact/?fn=${postContact.firstName}&ln=${postContact.lastName}&tn=${postContact.phone}`)
 //    , {
 //        method: 'POST', 
 //        body: JSON.stringify(postContact)
@@ -58,11 +58,6 @@ handleAddContact = (postContact) =>{
     }
 
 }
-
-
-
-
-
 
 
 export default MainPage;
